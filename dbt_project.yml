@@ -10,7 +10,7 @@ profile: 'dbt_git_clone'
 
 quoting:
   database: false
-  schema: false  
+  schema: false 
   identifier: true    # This keeps all column names quoted = lowercase
 
 
