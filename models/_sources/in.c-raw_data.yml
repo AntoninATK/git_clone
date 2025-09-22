@@ -1,0 +1,48 @@
+---
+version: 2
+sources:
+  - name: in.c-raw_data
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-raw_data
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: raw_customers
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: raw_items
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: raw_orders
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: raw_products
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: raw_stores
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: raw_supplies
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
